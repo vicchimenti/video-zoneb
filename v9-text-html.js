@@ -46,9 +46,6 @@ try {
 
 
 
-
-
-
      /***
      *  Write the document once
      * 
