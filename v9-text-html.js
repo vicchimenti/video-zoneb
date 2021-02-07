@@ -57,23 +57,6 @@ try {
 
 
 
-    // <div class="embeddedVideoWrapper contentItem" title="' + videoName + '" id="id<t4 type='meta' meta='content_id' />" data-position-default="ZoneB" data-position-selected="<t4 type='content' name='Zone Option' output='normal' display_field='value' />">
-    //     <t4 type="meta" meta="html_anchor" />
-    //     <div class="embeddedVideo">
-    //         <div class="embeddedVideoInner">
-
-                // <script>
-
-                //     document.write(output);
-                // </script>
-
-    //         </div>
-    //         <p><t4 type="content" name="Video Description" output="normal" modifiers="striptags,htmlentities" /></p>
-    //     </div>
-    // </div>
-
-
-
      /***
      *  Write the document once
      * 
@@ -86,6 +69,7 @@ try {
 
 
 
+    
 } catch (err) {
     document.write(err.message);
 }
