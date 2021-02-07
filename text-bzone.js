@@ -36,9 +36,10 @@ try {
      *  Declare/Assign local variables with base formatting
      * 
      * */
-    var href= "https://player.vimeo.com/video/";
+    var hrefVimeo= "https://player.vimeo.com/video/";
+    var hrefYouTube= "https://www.youtube.com/watch?v=";
     var chosenID = "youTubeID";
-    var videoString = '<iframe src="' + href + chosenID + '" width="500" height="281"></iframe>';
+    var videoString = '<iframe src="' + hrefYouTube + chosenID + '" width="500" height="281"></iframe>';
     var descriptionString = '<div class="description">"' + videoDescription + '"</div>'
     var beginningHTML = '<div class="embeddedVideoWrapper contentItem" title="' + videoName + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="ZoneB" data-position-selected="ZoneB"/>">';
     var endingHTML = '</div>';
