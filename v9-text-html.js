@@ -41,7 +41,6 @@ try {
                                 <t4 type=&quot;content&quot; name=&quot;vimeoID&quot; output=&quot;normal&quot; modifiers=&quot;striptags&quot; />?color=aa0000&title=0&byline=0&portrait=0&rel=0&showinfo=0' \
                                 width='585' height='329' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>";
     var descriptionString = '<div class="description">"' + videoDescription + '"</div>'
-    var beginningHTML = '<div class="embeddedVideoWrapper contentItem" title="' + videoName + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="ZoneB" data-position-selected="ZoneB"/>">';
     var beginningHTML = '<div class="embeddedVideoWrapper contentItem" title="' + videoName + '" id="id<t4 type=\'meta\' meta=\'content_id\' />" data-position-default="ZoneB" data-position-selected="<t4 type=\'content\' name=\'Zone Option\' output=\'normal\' display_field=\'value\' />">';
 
     var endingHTML = '</div>';
