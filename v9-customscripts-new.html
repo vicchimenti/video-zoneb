@@ -13,8 +13,8 @@
         // href = "//player.vimeo.com/video/" + vimeoID;
         // src = "";
         href = '//vimeo.com/' + vimeoID;
-        apiString = '//api.vimeo.com/videos/'+ vimeoID + '/pictures'
-        $.getJSON('//vimeo.com/api/oembed.json?url=' + apiString + '', function(thumbnail) {
+        // apiString = '//api.vimeo.com/videos/'+ vimeoID + '/pictures'
+        $.getJSON('//vimeo.com/api/oembed.json?url=' + href + '', function(thumbnail) {
           src = thumbnail[0].data;
           addAttr();
         });
