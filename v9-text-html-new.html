@@ -10,7 +10,6 @@
             var t4w = new com.terminalfour.utils.T4StreamWriter(sw);
             new com.terminalfour.publish.ContentPublisher().write(t4w, dbStatement, publishCache, section, content, contentTypeLayout, isPreview); 
             output = sw.toString();
-            document.write('<br/>-- '+contentTypeLayout + ' --<br/>');
             document.write(output);
         </script>
 
