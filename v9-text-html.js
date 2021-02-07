@@ -41,6 +41,7 @@ try {
     var descriptionString = '<div class="description">"' + videoDescription + '"</div>'
     var beginningHTML = '<div class="embeddedVideoWrapper contentItem" title="' + videoName + '" id="id<t4 type=\'meta\' meta=\'content_id\' />" data-position-default="ZoneB" data-position-selected="<t4 type=\'content\' name=\'Zone Option\' output=\'normal\' display_field=\'value\' />">';
     var endingHTML = '</div>';
+    var videoWrapper = '<div class="embeddedVideo"><div class="embeddedVideoInner">';
 
 
 
@@ -71,7 +72,8 @@ try {
      * */
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
     document.write(anchorTag);
-    document.write(descriptionString);
+    document.write(output);
+    // document.write(descriptionString);
     document.write(endingHTML);
 
 
