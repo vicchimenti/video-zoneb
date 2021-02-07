@@ -15,7 +15,7 @@
         href = '//vimeo.com/' + vimeoID;
         // apiString = '//api.vimeo.com/videos/'+ vimeoID + '/pictures'
         $.getJSON('//vimeo.com/api/oembed.json?url=' + href + '', function(thumbnail) {
-          src = thumbnail[0].data;
+          src = thumbnail[0].paging.first;
           addAttr();
         });
       }
