@@ -42,23 +42,25 @@ try {
                                 width='585' height='329' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>";
     var descriptionString = '<div class="description">"' + videoDescription + '"</div>'
     var beginningHTML = '<div class="embeddedVideoWrapper contentItem" title="' + videoName + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="ZoneB" data-position-selected="ZoneB"/>">';
+    var beginningHTML = '<div class="embeddedVideoWrapper contentItem" title="' + videoName + '" id="id<t4 type=\'meta\' meta=\'content_id\' />" data-position-default="ZoneB" data-position-selected="<t4 type=\'content\' name=\'Zone Option\' output=\'normal\' display_field=\'value\' />">';
+
     var endingHTML = '</div>';
 
 
 
-    <div class="embeddedVideoWrapper contentItem" id="id<t4 type='meta' meta='content_id' />" data-position-default="ZoneB" data-position-selected="<t4 type='content' name='Zone Option' output='normal' display_field='value' />">
+    <div class="embeddedVideoWrapper contentItem" title="' + videoName + '" id="id<t4 type='meta' meta='content_id' />" data-position-default="ZoneB" data-position-selected="<t4 type='content' name='Zone Option' output='normal' display_field='value' />">
         <t4 type="meta" meta="html_anchor" />
         <div class="embeddedVideo">
             <div class="embeddedVideoInner">
 
-            <script>
-            var contentTypeLayout   = 'text/bzone'; //the content layout that you want to display
-            var sw = new java.io.StringWriter();
-            var t4w = new com.terminalfour.utils.T4StreamWriter(sw);
-            new com.terminalfour.publish.ContentPublisher().write(t4w, dbStatement, publishCache, section, content, contentTypeLayout, isPreview); 
-            output = sw.toString();
-            document.write(output);
-            </script>
+                <script>
+                    var contentTypeLayout   = 'text/bzone'; //the content layout that you want to display
+                    var sw = new java.io.StringWriter();
+                    var t4w = new com.terminalfour.utils.T4StreamWriter(sw);
+                    new com.terminalfour.publish.ContentPublisher().write(t4w, dbStatement, publishCache, section, content, contentTypeLayout, isPreview); 
+                    output = sw.toString();
+                    document.write(output);
+                </script>
 
             </div>
             <p><t4 type="content" name="Video Description" output="normal" modifiers="striptags,htmlentities" /></p>
