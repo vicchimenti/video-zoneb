@@ -38,12 +38,6 @@ try {
      * */
     var href= "https://player.vimeo.com/video/";
     var chosenID = "vimeoID";
-
-
-    var videoPlayerString =     "<iframe title='videoName' src='<t4 type=&quot;content&quot; name=&quot;videoName&quot; output=&quot;normal&quot; display_field=&quot;value&quot; /> \
-                                <t4 type=&quot;content&quot; name=&quot;vimeoID&quot; output=&quot;normal&quot; modifiers=&quot;striptags&quot; />?color=aa0000&title=0&byline=0&portrait=0&rel=0&showinfo=0' \
-                                width='585' height='329' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>";
-
     var videoString = '<iframe src="' + href + chosenID + '" width="500" height="281"></iframe>';
     var descriptionString = '<div class="description">"' + videoDescription + '"</div>'
     var beginningHTML = '<div class="embeddedVideoWrapper contentItem" title="' + videoName + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="ZoneB" data-position-selected="ZoneB"/>">';
