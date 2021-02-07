@@ -39,7 +39,7 @@ try {
     var hrefVimeo= "https://player.vimeo.com/video/";
     var hrefYouTube= "https://www.youtube.com/watch?v=";
     var chosenID = "youTubeID";
-    var videoString = '<iframe src="' + hrefYouTube + chosenID + '" width="500" height="281"></iframe>';
+    var videoString = '<p><iframe src="' + hrefYouTube + chosenID + '" width="500" height="281"></iframe></p>';
     var descriptionString = '<div class="description">"' + videoDescription + '"</div>'
     var beginningHTML = '<div class="embeddedVideoWrapper contentItem" title="' + videoName + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="ZoneB" data-position-selected="ZoneB"/>">';
     var endingHTML = '</div>';
