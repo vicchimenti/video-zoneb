@@ -20,8 +20,8 @@
     addAttr();
   }
   else if (vimeoID) {
-    href = 'https://vimeo.com/' + vimeoID;
-    $.getJSON('//vimeo.com/api/oembed.json?url=' + href + '', function(data) {
+    href = '//vimeo.com/' + vimeoID;
+    $.getJSON('//vimeo.com/api/oembed.json?url=' + href + '/pictures', function(data) {
       src = data[0].thumbnail_large;
       addAttr();
     });
