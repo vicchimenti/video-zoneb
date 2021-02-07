@@ -46,10 +46,10 @@ try {
 
 
 
-    <div class="embeddedVideoWrapper contentItem" title="' + videoName + '" id="id<t4 type='meta' meta='content_id' />" data-position-default="ZoneB" data-position-selected="<t4 type='content' name='Zone Option' output='normal' display_field='value' />">
-        <t4 type="meta" meta="html_anchor" />
-        <div class="embeddedVideo">
-            <div class="embeddedVideoInner">
+    // <div class="embeddedVideoWrapper contentItem" title="' + videoName + '" id="id<t4 type='meta' meta='content_id' />" data-position-default="ZoneB" data-position-selected="<t4 type='content' name='Zone Option' output='normal' display_field='value' />">
+    //     <t4 type="meta" meta="html_anchor" />
+    //     <div class="embeddedVideo">
+    //         <div class="embeddedVideoInner">
 
                 <script>
                     var contentTypeLayout   = 'text/bzone'; //the content layout that you want to display
@@ -60,10 +60,10 @@ try {
                     document.write(output);
                 </script>
 
-            </div>
-            <p><t4 type="content" name="Video Description" output="normal" modifiers="striptags,htmlentities" /></p>
-        </div>
-    </div>
+    //         </div>
+    //         <p><t4 type="content" name="Video Description" output="normal" modifiers="striptags,htmlentities" /></p>
+    //     </div>
+    // </div>
 
 
 
