@@ -13,8 +13,8 @@
         // href = "//player.vimeo.com/video/" + vimeoID;
         // src = "";
         href = '//vimeo.com/' + vimeoID;
-        $.getJSON('//vimeo.com/api/oembed.json?url=' + href + '', function(data) {
-          src = data[0].sizes;
+        $.getJSON('//vimeo.com/api/oembed.json?url=' + href + '/pictures', function(thumbnail) {
+          src = thumbnail[0].data;
           addAttr();
         });
       }
@@ -67,7 +67,7 @@
               this.inner.css({
                   overflow: 'hidden'
               });
-              }
+            }
         });
     //});
     </script>
