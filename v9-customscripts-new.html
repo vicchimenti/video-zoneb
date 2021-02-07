@@ -10,12 +10,14 @@
         addAttr();
       }
       else if (vimeoID) {
-        href = '//vimeo.com/' + vimeoID;
-        $.getJSON('//vimeo.com/api/oembed.json?url=' + href + '', function(data) {
-          src='';
+        href = "//player.vimeo.com/video/" + vimeoID;
+        src = "";
+        // href = '//vimeo.com/' + vimeoID;
+        // $.getJSON('//vimeo.com/api/oembed.json?url=' + href + '', function(data) {
+        //   src='';
           // src = data[0].thumbnail_url_with_play_button;
           addAttr();
-        });
+        // });
       }
       
       function addAttr() {
