@@ -37,11 +37,18 @@ try {
      * 
      * */
     var href= "https://player.vimeo.com/video/";
-    var chosenID = "vimeoID";
+    var chosenID = "youTubeID";
     var videoString = '<iframe src="' + href + chosenID + '" width="500" height="281"></iframe>';
     var descriptionString = '<div class="description">"' + videoDescription + '"</div>'
     var beginningHTML = '<div class="embeddedVideoWrapper contentItem" title="' + videoName + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="ZoneB" data-position-selected="ZoneB"/>">';
     var endingHTML = '</div>';
+
+
+
+
+    /***
+     *  If YouTube and Vimeo ids are both present default to YouTube
+     */
 
 
 
