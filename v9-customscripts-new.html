@@ -12,7 +12,7 @@
       else if (vimeoID) {
         href = 'https://vimeo.com/' + vimeoID;
         $.getJSON('//vimeo.com/api/oembed.json?url=' + href + '', function(data) {
-          src = data[0].thumbnail_large;
+        src = data[0].thumbnail_url_with_play_button;
           addAttr();
         });
       }
