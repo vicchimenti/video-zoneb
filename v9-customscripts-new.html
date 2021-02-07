@@ -10,14 +10,13 @@
         addAttr();
       }
       else if (vimeoID) {
-        href = "//player.vimeo.com/video/" + vimeoID;
-        src = "";
-        // href = '//vimeo.com/' + vimeoID;
-        // $.getJSON('//vimeo.com/api/oembed.json?url=' + href + '', function(data) {
-        //   src='';
-          // src = data[0].thumbnail_url_with_play_button;
+        // href = "//player.vimeo.com/video/" + vimeoID;
+        // src = "";
+        href = '//vimeo.com/' + vimeoID;
+        $.getJSON('//vimeo.com/api/oembed.json?url=' + href + '', function(data) {
+          src = data[0].sizes;
           addAttr();
-        // });
+        });
       }
       
       function addAttr() {
@@ -31,28 +30,28 @@
     <script type="text/javascript">
     //$(document).ready(function() {
         $(".popup").fancybox({
-              scrolling: 'no',
+            scrolling: 'no',
             wrapCSS: "fancybox-class",
             type: "iframe",
             iframe: {
                 preload: false,
-                  scrolling: 'no'
+                scrolling: 'no'
             },
             helpers: {
                 overlay: {
-                    locked: false
+                  locked: false
                 }
             }
         });
                     
         $(".media-helper").fancybox({
-              scrolling: 'no',
+            scrolling: 'no',
             wrapCSS: "fancybox-class",
             padding : 0,
             helpers: {
                 media: {},
                 overlay: {
-                    locked: false
+                  locked: false
                 },
             },
             beforeLoad : function() {         
