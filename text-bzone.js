@@ -37,7 +37,7 @@ try {
      * 
      * */
     var href= "https://player.vimeo.com/video/";
-    var src = "vimeoID";
+    var chosenID = "vimeoID";
     var videoPlayerString =     "<iframe title='videoName' src='<t4 type=&quot;content&quot; name=&quot;Video Type&quot; output=&quot;normal&quot; display_field=&quot;value&quot; /> \
                                 <t4 type=&quot;content&quot; name=&quot;vimeoID&quot; output=&quot;normal&quot; modifiers=&quot;striptags&quot; />?color=aa0000&title=0&byline=0&portrait=0&rel=0&showinfo=0' \
                                 width='585' height='329' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>";
