@@ -4,9 +4,18 @@
       <div class="embeddedVideoInner">
 
       </div>
+        <script>
+            var contentTypeLayout   = 'text/programmable-layout'; //the content layout that you want to display
+            var sw = new java.io.StringWriter();
+            var t4w = new com.terminalfour.utils.T4StreamWriter(sw);
+            new com.terminalfour.publish.ContentPublisher()
+            .write(t4w, dbStatement, publishCache, section, content, contentTypeLayout, isPreview); 
+            output = sw.toString();
+            document.write('<br/>-- '+contentTypeLayout + ' --<br/>');
+            document.write(output);
+        </script>
 
 
-      
     <!-- <a class="media-helper" target="_blank" id="video<t4 type='meta' meta='content_id' />">
       <img class="img-responsive media-thumbnail" alt="Video thumbnail" id="image<t4 type='meta' meta='content_id' />">
       <span class="far fa-play-circle play-button"></span>
