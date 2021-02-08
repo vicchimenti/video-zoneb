@@ -10,12 +10,28 @@
         addAttr();
       }
       else if (vimeoID) {
-        key = "thumbnail_url_with_play_button";
-        href = '//vimeo.com/' + vimeoID;
-        $.getJSON('//vimeo.com/api/oembed.json?url=' + href + '', function(data) {
+        var key = "thumbnail_url_with_play_button";
+        var href = '//vimeo.com/' + vimeoID;
+        var getJSON = async (href) => {
+          try {
+            var response = await fetch(href);
+            if (!response.ok)
+              // check if response worked (no 404 errors etc...)
+              throw new Error(response.statusText);
+
+            var data = await response.json(); // get JSON from the response
+            return data; // returns a promise, which resolves to this data value
+          } catch (error) {
+            return error;
+          }
           src = data.key;
           addAttr();
-        });
+        };
+
+        // $.getJSON('//vimeo.com/api/oembed.json?url=' + href + '', function(data) {
+        //   src = data.key;
+        //   addAttr();
+        // });
       }
       
       function addAttr() {
