@@ -14,6 +14,7 @@
         vimeoID = "<t4 type='content' name='Vimeo Video ID' output='normal' modifiers='striptags,htmlentities' />",
         url = '',
         href = '',
+        data = '',
         src = '';
         // var videoTitle = '';
     if (youtubeID) {
@@ -32,7 +33,7 @@
             // check if response worked (no 404 errors etc...)
             throw new Error(response.statusText);
 
-          var data = await response.json(); // get JSON from the response
+          data = await response.json(); // get JSON from the response
           return data; // returns a promise, which resolves to this data value
         } catch (error) {
           return error;
