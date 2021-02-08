@@ -12,19 +12,20 @@
 (function(){
   var youtubeID = "<t4 type='content' name='Youtube Video ID' output='normal' modifiers='striptags,htmlentities' />",
       vimeoID = "<t4 type='content' name='Vimeo Video ID' output='normal' modifiers='striptags,htmlentities' />",
-      href = '',
-      src = '';
+      var href = '',
+      var src = '';
+      var videoTitle = '';
   if (youtubeID) {
   	href = '//www.youtube.com/watch?v=' + youtubeID;
     src = '//img.youtube.com/vi/' + youtubeID + '/mqdefault.jpg';
     addAttr();
   }
   else if (vimeoID) {
-    var key = "thumbnail_url_with_play_button";
-    var href = '//vimeo.com/' + vimeoID;
-    var getJSON = async (href) => {
+    var url = '//vimeo.com/' + vimeoID;
+    var statusText = "no thumbnail";
+    var getJSON = async (url) => {
       try {
-        var response = await fetch(href);
+        var response = await fetch(url);
         if (!response.ok)
           // check if response worked (no 404 errors etc...)
           throw new Error(response.statusText);
@@ -34,7 +35,8 @@
       } catch (error) {
         return error;
       }
-      src = data.key;
+      href = data.html;
+      src = data.thumbnail_url_with_play_button;
       addAttr();
     };
 
