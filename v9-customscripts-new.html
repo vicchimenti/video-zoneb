@@ -11,9 +11,10 @@
       }
       else if (vimeoID) {
         href = '//vimeo.com/' + vimeoID;
-        var getJSON = async ('//vimeo.com/api/oembed.json?url=' + href + '') => {
+        url = '//vimeo.com/api/oembed.json?url=' + href + '';
+        var getJSON = async (url) => {
           try {
-            var response = await fetch('//vimeo.com/api/oembed.json?url=' + href + '');
+            var response = await fetch(url);
             if (!response.ok)
               // check if response worked (no 404 errors etc...)
               throw new Error(response.statusText);
