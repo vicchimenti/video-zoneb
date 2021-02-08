@@ -10,30 +10,36 @@
 
 <script>
   (function() {
+
     var youtubeID = "<t4 type='content' name='Youtube Video ID' output='normal' modifiers='striptags,htmlentities' />",
         vimeoID = "<t4 type='content' name='Vimeo Video ID' output='normal' modifiers='striptags,htmlentities' />",
         url = '',
         href = '',
         data = '',
         src = '';
-        // var videoTitle = '';
+
     if (youtubeID) {
+
       href = '//www.youtube.com/watch?v=' + youtubeID;
       src = '//img.youtube.com/vi/' + youtubeID + '/mqdefault.jpg';
       addAttr();
-    }
-    else if (vimeoID) {
+
+    } else if (vimeoID) {
+
       href = '//vimeo.com/' + vimeoID;
       url = '//vimeo.com/api/oembed.json?url=' + href + '';
+
       $.getJSON(url, function(data) {
-          src = data.thumbnail_url_with_play_button;
-          addAttr();
-        });
+        src = data.thumbnail_url_with_play_button;
+        addAttr();
+      });
     }
     
     function addAttr() {
+
       document.getElementById("video<t4 type='meta' meta='content_id' />").setAttribute('href', href);
       document.getElementById("image<t4 type='meta' meta='content_id' />").setAttribute('src', src);
+
     }
   })();
 </script>
