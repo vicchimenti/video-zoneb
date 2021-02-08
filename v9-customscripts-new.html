@@ -11,9 +11,9 @@
       }
       else if (vimeoID) {
         key = "thumbnail_url_with_play_button";
-        href = 'https://vimeo.com/' + vimeoID;
-        $.getJSON('//vimeo.com/api/oembed.json?url=' + href + '', function(obj) {
-          src = obj.key[0];
+        href = '//vimeo.com/' + vimeoID;
+        $.getJSON('//vimeo.com/api/oembed.json?url=' + href + '', function(data) {
+          src = data.key[0];
           addAttr();
         });
       }
