@@ -6,6 +6,7 @@
         href = '',
         url = '',
         data = '',
+        videoTitle = '',
         src = '';
 
     if (youtubeID) {
@@ -21,6 +22,7 @@
 
       $.getJSON(url, function(data) {
         src = data.thumbnail_url_with_play_button;
+        videoTitle = data.title;
         addAttr();
       });
 
@@ -29,6 +31,7 @@
     function addAttr() {
 
       document.getElementById("video<t4 type='meta' meta='content_id' />").setAttribute('href', href);
+      document.getElementById("video<t4 type='meta' meta='content_id' />").setAttribute('title', videoTitle);
       document.getElementById("image<t4 type='meta' meta='content_id' />").setAttribute('src', src);
       
     }
