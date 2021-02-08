@@ -14,25 +14,6 @@
       else if (vimeoID) {
         href = '//vimeo.com/' + vimeoID;
         url = '//vimeo.com/api/oembed.json?url=' + href + '';
-        // $.getJSON = async (url) => {
-        //   try {
-        //     var response = await fetch(url);
-        //     if (!response.ok)
-        //       // check if response worked (no 404 errors etc...)
-        //       throw new Error(response.statusText);
-
-        //     data = await response.json(); // get JSON from the response
-        //     // return data; // returns a promise, which resolves to this data value
-        //     addAttr();
-
-        //   } catch (error) {
-        //     return error;
-        //   }
-          // href = data.html;
-          // src = data.thumbnail_url_with_play_button;
-          // addAttr();
-       // };
-        // console.log(data);
         $.getJSON(url, function(data) {
           src = data.thumbnail_url_with_play_button;
           addAttr();
