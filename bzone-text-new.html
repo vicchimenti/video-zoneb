@@ -21,11 +21,11 @@
     addAttr();
   }
   else if (vimeoID) {
-    var url = '//vimeo.com/' + vimeoID;
+    href = '//vimeo.com/' + vimeoID;
     var statusText = "no thumbnail";
-    var getJSON = async (url) => {
+    var getJSON = async (href) => {
       try {
-        var response = await fetch(url);
+        var response = await fetch(href);
         if (!response.ok)
           // check if response worked (no 404 errors etc...)
           throw new Error(response.statusText);
@@ -35,7 +35,7 @@
       } catch (error) {
         return error;
       }
-      href = data.html;
+      // href = data.html;
       src = data.thumbnail_url_with_play_button;
       addAttr();
     };
