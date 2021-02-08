@@ -25,7 +25,7 @@
     var statusText = "no thumbnail";
     var getJSON = async (href) => {
       try {
-        var response = await fetch(href);
+        var response = await fetch('//vimeo.com/api/oembed.json?url=' + href + '');
         if (!response.ok)
           // check if response worked (no 404 errors etc...)
           throw new Error(response.statusText);
