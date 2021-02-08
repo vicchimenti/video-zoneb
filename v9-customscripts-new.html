@@ -14,7 +14,7 @@
       else if (vimeoID) {
         href = '//vimeo.com/' + vimeoID;
         url = '//vimeo.com/api/oembed.json?url=' + href + '';
-        var getJSON = async (url) => {
+        $.getJSON = async (url) => {
           try {
             var response = await fetch(url);
             if (!response.ok)
