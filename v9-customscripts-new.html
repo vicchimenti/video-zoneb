@@ -1,34 +1,44 @@
 <script>
-    (function() {
-      var youtubeID = "<t4 type='content' name='Youtube Video ID' output='normal' modifiers='striptags,htmlentities' />",
-          vimeoID = "<t4 type='content' name='Vimeo Video ID' output='normal' modifiers='striptags,htmlentities' />",
-          href = '',
-          url = '',
-          data = '',
-          src = '';
-      if (youtubeID) {
+  (function() {
+
+    var youtubeID = "<t4 type='content' name='Youtube Video ID' output='normal' modifiers='striptags,htmlentities' />",
+        vimeoID = "<t4 type='content' name='Vimeo Video ID' output='normal' modifiers='striptags,htmlentities' />",
+        href = '',
+        url = '',
+        data = '',
+        src = '';
+
+    if (youtubeID) {
+
       href = '//www.youtube.com/watch?v=' + youtubeID;
-        src = '//img.youtube.com/vi/' + youtubeID + '/mqdefault.jpg';
+      src = '//img.youtube.com/vi/' + youtubeID + '/mqdefault.jpg';
+      addAttr();
+
+    } else if (vimeoID) {
+
+      href = '//vimeo.com/' + vimeoID;
+      url = '//vimeo.com/api/oembed.json?url=' + href + '';
+
+      $.getJSON(url, function(data) {
+        src = data.thumbnail_url_with_play_button;
         addAttr();
-      }
-      else if (vimeoID) {
-        href = '//vimeo.com/' + vimeoID;
-        url = '//vimeo.com/api/oembed.json?url=' + href + '';
-        $.getJSON(url, function(data) {
-          src = data.thumbnail_url_with_play_button;
-          addAttr();
-        });
-      }
+      });
+
+    }
+    
+    function addAttr() {
+
+      document.getElementById("video<t4 type='meta' meta='content_id' />").setAttribute('href', href);
+      document.getElementById("image<t4 type='meta' meta='content_id' />").setAttribute('src', src);
       
-      function addAttr() {
-        document.getElementById("video<t4 type='meta' meta='content_id' />").setAttribute('href', href);
-        document.getElementById("image<t4 type='meta' meta='content_id' />").setAttribute('src', src);
-      }
-    })();
+    }
+  })();
 </script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/helpers/jquery.fancybox-media.js"></script> 
-<script type="text/javascript">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/helpers/jquery.fancybox-media.js"></script>
+
+<script>
   $(".popup").fancybox({
     scrolling: 'no',
     wrapCSS: "fancybox-class",
