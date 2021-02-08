@@ -23,7 +23,7 @@
   else if (vimeoID) {
     href = '//vimeo.com/' + vimeoID;
     var statusText = "no thumbnail";
-    var getJSON = async (href) => {
+    var getJSON = async ('//vimeo.com/api/oembed.json?url=' + href + '') => {
       try {
         var response = await fetch('//vimeo.com/api/oembed.json?url=' + href + '');
         if (!response.ok)
